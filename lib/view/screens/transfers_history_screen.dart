@@ -1,6 +1,7 @@
 import 'package:app/view/widgets/bit_text.dart';
 import 'package:app/view/widgets/small_text.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 
 import '../../controllers/transfer_controller.dart';
 import '../../model/transfer_model.dart';
@@ -39,13 +40,13 @@ class TransferHistoryScreen extends StatelessWidget {
   }
 
   Widget itemViewBuilder() {
-    return Container(
+    return Obx(()=> Container(
       height: Dimension.screenHeight - Dimension.scaleHeight(59) - 100,
       child: ListView.builder(
           itemCount: TransferController.transferList.length,
           itemBuilder: (_, index) => itemView(TransferController.transferList[index])
-             ),
-    );
+      ),
+    ));
 
   }
   Widget itemView(Transfer transfer)

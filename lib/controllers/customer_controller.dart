@@ -6,7 +6,7 @@ import '../model/customer_model.dart';
 
 class CustomersController extends GetxController{
 
- static List customerList=[].obs();
+ static List customerList=[].obs;
  void initDb()async
  {
   await getCustomers();
@@ -33,6 +33,7 @@ class CustomersController extends GetxController{
  getCustomers() async {
    final List<Map<String, dynamic>> customers = await DBCustomerHelper.query();
    customerList.assignAll(customers.map((data) => Customer.fromjson(data)).toList());
+   update();
 print(customerList);
  }
 

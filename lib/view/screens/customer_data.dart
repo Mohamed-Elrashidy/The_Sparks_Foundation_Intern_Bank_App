@@ -9,7 +9,6 @@ import '../../model/customer_model.dart';
 import '../../model/transfer_model.dart';
 import '../../utils/dimensionScale.dart';
 import '../widgets/main_button.dart';
-import 'customers_screen.dart';
 
 class CustomerDataScreen extends StatelessWidget {
   final Customer customer;

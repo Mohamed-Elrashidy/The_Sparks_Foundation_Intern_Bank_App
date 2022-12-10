@@ -46,7 +46,7 @@ class CustomersScreen extends StatelessWidget {
     );
   }
   Widget itemViewBuilder() {
-    return Container(
+    return Obx(()=>Container(
       height: Dimension.screenHeight - Dimension.scaleHeight(59) -100,
       child: ListView.builder(
           itemCount: CustomersController.customerList.length,
@@ -60,7 +60,7 @@ class CustomersScreen extends StatelessWidget {
                 title1: "Name",
                 title2: "ID"),
           )),
-    );
+    ));
   }
 
 }

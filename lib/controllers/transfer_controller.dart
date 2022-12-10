@@ -7,7 +7,7 @@ import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 
 class TransferController extends GetxController{
 
-  static List transferList=[].obs();
+  static List transferList=[].obs;
   void initDb()async
   {
    await getTransfers();
@@ -22,6 +22,7 @@ class TransferController extends GetxController{
   getTransfers() async {
     final List<Map<String, dynamic>> customers = await DBTransferHelper.query();
     transferList.assignAll(customers.map((data) => Transfer.fromjson(data)).toList());
+    update();
     print(transferList.length);
   }
 
