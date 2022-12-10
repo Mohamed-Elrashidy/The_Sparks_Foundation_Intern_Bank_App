@@ -44,10 +44,14 @@ class _SplashScreenState extends State<SplashScreen> {
 
                   imagesBuilder(),
                   SizedBox(height: Dimension.scaleHeight(100),),
-                  textBuilder(),
+                  textBuilder("Powred by","The Sparks Foundation"),
                   SizedBox(height: Dimension.scaleHeight(20),),
+                  logoBuilder(),
 
-                  logoBuilder()
+                  SizedBox(height: Dimension.scaleHeight(20),),
+                  textBuilder("Made by","Mohamed Elrashidy"),
+
+
 
                 ],
               ),
@@ -57,12 +61,12 @@ class _SplashScreenState extends State<SplashScreen> {
       ),
     );
   }
-  Widget textBuilder()
+  Widget textBuilder(title,detail)
   {
     return Column(
       children: [
-        BigText(text: "Powred by"),
-        BigText(text: "The Sparks Foundation")
+        BigText(text: title),
+        BigText(text: detail)
       ],
     );
   }
