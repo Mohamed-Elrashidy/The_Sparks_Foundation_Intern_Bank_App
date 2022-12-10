@@ -15,7 +15,7 @@ class ItemView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: Dimension.scaleHeight(10),horizontal: 10),
-      height: Dimension.scaleHeight(50),
+      height: Dimension.scaleHeight(60),
       width: Dimension.screenWidth-Dimension.scaleWidth(40),
       decoration: BoxDecoration(
         color: Colors.orangeAccent,

@@ -1,5 +1,5 @@
 import 'package:app/view/screens/home_screen.dart';
-import 'package:app/view/screens/transfers_screen.dart';
+import 'package:app/view/screens/transfers_history_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
@@ -8,7 +8,7 @@ class BottomNavBarScreen extends StatelessWidget {
   PersistentTabController _controller = PersistentTabController();
   BottomNavBarScreen({Key? key}) : super(key: key);
   List<Widget> _buildScreens() {
-    return [HomeScreen(), TransferScreen()];
+    return [HomeScreen(), TransferHistoryScreen()];
   }
 
   List<PersistentBottomNavBarItem> _navBarsItems() {

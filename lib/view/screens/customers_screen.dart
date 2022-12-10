@@ -1,3 +1,4 @@
+import 'package:app/controllers/customer_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -48,14 +49,14 @@ class CustomersScreen extends StatelessWidget {
     return Container(
       height: Dimension.screenHeight - Dimension.scaleHeight(59) -100,
       child: ListView.builder(
-          itemCount: DummyData.customersList.length,
+          itemCount: CustomersController.customerList.length,
           itemBuilder: (_, index) => InkWell(
             onTap: (){
-              Get.to(CustomerDataScreen(DummyData.customersList[index]));
+              Get.to(CustomerDataScreen(CustomersController.customerList[index]));
             },
             child: ItemView(
-                data1: DummyData.customersList[index].name,
-                data2: DummyData.customersList[index].id,
+                data1: CustomersController.customerList[index].name!,
+                data2: CustomersController.customerList[index].id!,
                 title1: "Name",
                 title2: "ID"),
           )),
