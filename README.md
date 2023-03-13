@@ -7,9 +7,9 @@
   
   * ### Application Features
        * #### Show all stored customers
-       * #### show each customer full data
-       * #### allow each customer to make transaction
-       * #### show history of all transactions
+       * #### Show each customer full data
+       * #### Allow each customer to make transaction
+       * #### Show history of all transactions
   * ### Tools
      * ### Framework Flutter
      * ### State managment Getx
